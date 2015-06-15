@@ -1,8 +1,5 @@
 <?php require ('header.php');?>
-
-
-
-
+<?php require 'database_connection.php'?>
 <h1>Админ - часть</h1>
 <form action="formControl.php" type="post">
     <label for="name">Имя</label>
@@ -13,7 +10,6 @@
          <input type="text" name="year" placeholder="Год рождения"/><br/>
     <input type="submit" value="Отправить"/>
 </form>
-
 
 
 
