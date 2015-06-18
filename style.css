@@ -5,6 +5,14 @@ body{
 div{
     box-sizing: border-box;
 }
+ul li{
+    list-style: none;
+}
+ul li a{
+    color:#454545;
+    text-decoration: none;
+    text-transform: capitalize;
+}
 h1{
     text-align: center;
 }
@@ -37,4 +45,8 @@ h1{
     min-width: 70%;
     padding: 10px;
     background:#fff;
+}
+.white-body{
+    background: #fff;
+    padding:10px;
 }
