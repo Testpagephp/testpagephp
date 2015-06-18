@@ -1,7 +1,7 @@
 <?php require ('header.php');?>
 <?php require 'database_connection.php'?>
 <h1>Админ - часть</h1>
-<form action="formControl.php" type="post">
+<form action="formControl.php" method="post">
     <label for="name">Имя</label>
         <input type="text" name="name" placeholder="Имя"/><br/>
     <label for="lastName"></label>
