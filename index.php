@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="windows-1251">
+    <meta charset="utf-8">
     <title>Title of the document</title>
     <link rel="stylesheet" href="style.css"/>
 </head>
