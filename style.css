@@ -1,0 +1,40 @@
+body{
+    margin:0;
+    background:#ccc;
+}
+div{
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+}
+.intro-form{
+    width:20%;
+    margin:0 auto;
+}
+    .intro-form input[type='text']{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+.main-content{
+    width:35%;
+    margin: 10% auto;
+}
+.column{
+    display: inline-block;
+}
+.north{
+    width:100%;
+    min-width: 100%;
+    padding:10px;
+    background:#fff;
+}
+.west{
+    min-width: 30%;
+    width:30%;
+}
+.east{
+    min-width: 70%;
+    padding: 10px;
+    background:#fff;
+}
