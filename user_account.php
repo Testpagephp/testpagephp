@@ -5,7 +5,6 @@ $query = "SELECT * FROM users WHERE user_id=".$id;
 $result = $link->query($query);
 if(!$result) die("Error with finding user id={$id}");
 $row = $result->fetch_array(MYSQLI_ASSOC);
-
 $name = $row['first_name'];
 $last_name = $row['last_name'];;
 $bio = $row['bio'];
@@ -31,4 +30,3 @@ $bio = $row['bio'];
 </div>
 </body>
 </html>
-
