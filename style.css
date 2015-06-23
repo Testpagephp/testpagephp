@@ -32,6 +32,7 @@ h1{
     display: inline-block;
 }
 .north{
+    margin-bottom: 10px;
     width:100%;
     min-width: 100%;
     padding:10px;
@@ -40,9 +41,13 @@ h1{
 .west{
     min-width: 30%;
     width:30%;
+    background: #fff;
+    padding: 10px;
+    vertical-align: top;
 }
-.east{
-    min-width: 70%;
+.east{   
+    width:69%;
+    min-width: 69%;
     padding: 10px;
     background:#fff;
 }
