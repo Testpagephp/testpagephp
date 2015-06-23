@@ -1,4 +1,4 @@
-<?php require 'db_connection/database_connection.php'; ?>
+<?php require "db_connection/database_connection.php"; ?>
 <?php
 $y_query = "SELECT DISTINCT bd_year FROM users";
 $y_list = $link->query($y_query);
