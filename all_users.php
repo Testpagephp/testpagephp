@@ -32,10 +32,14 @@ $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
     <ul>
         <?php
         foreach ($data as $user)
-            echo "<li><a href='user_account.php?user_id=". $user['user_id'] ."'>". $user['first_name'] ." ". $user['last_name'] ." - ". $user['bd_year'] ." гр</a><a href='remove_user.php?user_id={$user['user_id'] }' style='float:right'>удалить </a></li>"
+            echo "<li><p><a href='user_account.php?user_id=". $user['user_id'] ."'>". $user['first_name'] ." ". $user['last_name'] ." - ". $user['bd_year'] ." гр</a><a href='remove_user.php?user_id={$user['user_id'] }' class='button'>удалить </a></p></li>"
         ?>
     </ul>
-    <p>Сортировать по годам:
+    <p style="
+    padding: 10px;
+    text-align: center;
+    background-color: #DFDEDE;
+">Сортировать по годам:
         <?php
         foreach($n_year as $year)
             echo " /<a href='/all_users.php?year={$year['bd_year']}'>{$year['bd_year']} </a> /"

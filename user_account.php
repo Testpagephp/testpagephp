@@ -1,13 +1,11 @@
 <?php
-require 'db_connection/database_connection.php';
+require_once 'user_manage.php';
 $id = $_REQUEST['user_id'];
-$query = "SELECT * FROM users WHERE user_id=".$id;
-$result = $link->query($query);
-if(!$result) die("Error with finding user id={$id}");
-$row = $result->fetch_array(MYSQLI_ASSOC);
-$name = $row['first_name'];
-$last_name = $row['last_name'];;
-$bio = $row['bio'];
+$row = new User($link);
+$final = $row -> show($id);
+$name = $final['first_name'];
+$last_name = $final['last_name'];
+$bio = $final['bio'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,7 +17,7 @@ $bio = $row['bio'];
 <body>
 <div class="main-content">
     <div class="north column">
-        <p>Greetings, <?php echo $name." ".$last_name ?></p>
+        <p>Greetings, <?= $name ?> <?= $last_name ?> <a href="update_user.php?user_id=<?= $id ?>" class="button">Редактировать данные</a></p>
     </div>
     <div class="west column">
 
