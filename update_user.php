@@ -26,7 +26,7 @@ $year = $final['bd_year'];
         <label for="year">Год рождения</label>
         <input type="text" name="year" placeholder="Год рождения" value="<?=$year?>"/><br/>
         <label for="shortDesc">Краткая информация</label>
-        <textarea name="bio" cols="30" rows="10" value="<?=$bio?>"></textarea>
+        <textarea name="bio" cols="30" rows="10"><?=$bio?></textarea>
         <input type="hidden" name="user_id" value="<?= $id ?>"/>
 <!--        <input type="hidden" name="MAX_FILE_SIZE" value="20000" />-->
 <!--        <input name="userfile" type="file"/>-->

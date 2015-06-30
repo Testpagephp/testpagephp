@@ -11,7 +11,7 @@ $bio = $final['bio'];
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Account of <?php echo $name?></title>
+    <title>Account of <?= $name?></title>
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
@@ -20,10 +20,10 @@ $bio = $final['bio'];
         <p>Greetings, <?= $name ?> <?= $last_name ?> <a href="update_user.php?user_id=<?= $id ?>" class="button">Редактировать данные</a></p>
     </div>
     <div class="west column">
-
+        <!--photo-->
     </div>
     <div class="east column">
-        <?php echo $bio ?>
+        <?= $bio ?>
     </div>
 </div>
 </body>
