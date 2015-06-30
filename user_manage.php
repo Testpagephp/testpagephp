@@ -23,11 +23,13 @@ class User{
             or die();
         return $result;
     }
-    function show($id){
-        $query = "SELECT * FROM users WHERE user_id=".$id;
+    function show(array $array){
+        foreach( $array as $id => $user ){
+        $query = "SELECT * FROM users WHERE ".$user."=".$id;
         $result = $this->link->query($query)
             or die();
         return $result->fetch_array(MYSQLI_ASSOC);
+        }
     }
     function update($id,$name,$last_name,$year,$bio){
         $query = "UPDATE users

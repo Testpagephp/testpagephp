@@ -32,7 +32,7 @@ $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
     <ul>
         <?php
         foreach ($data as $user)
-            echo "<li><p><a href='user_account.php?user_id=". $user['user_id'] ."'>". $user['first_name'] ." ". $user['last_name'] ." - ". $user['bd_year'] ." гр</a><a href='remove_user.php?user_id={$user['user_id'] }' class='button'>удалить </a></p></li>"
+            echo "<li><p><a href='/show/". $user['user_id'] .".xhtml'>". $user['first_name'] ." ". $user['last_name'] ." - ". $user['bd_year'] ." гр</a><a href='remove_user.php?user_id={$user['user_id'] }' class='button'>удалить </a></p></li>"
         ?>
     </ul>
     <p style="

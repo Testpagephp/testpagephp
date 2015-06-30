@@ -2,8 +2,8 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 include_once 'routes.php';
+include_once 'user_manage.php';
 // Тут нужно подключить через include файл с маршрутами, который описали выше.
-
 // Назначаем модуль и действие по умолчанию.
 $module = 'Not_Found';
 $action = 'main';
@@ -40,9 +40,16 @@ foreach ($routes as $map)
         break;
     }
 }
-
-echo "\$module: $module\n";
-echo "\$action: $action\n";
-echo "\$params:\n";
-print_r($params);
+$us = new $module($link);
+$final = $us->$action($params);
+print_r($final['first_name']);
+switch ($module){
+    case 'show':
+        include_once 'user_account.php';
+        break;
+}
+//echo "\$module: $module\n";
+//echo "\$action: $action\n";
+//echo "\$params:\n";
+//print_r($params['user_id']);
 ?>

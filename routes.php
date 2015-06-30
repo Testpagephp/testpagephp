@@ -19,7 +19,7 @@ $routes = array
 //        'method' => 'registration',
 //    ),
 
-    // Досье пользователя (http://localhost/userinfo/12345.xhtml)
+    // Досье пользователя (http://testpage.cc/show/12345.xhtml)
     array(
         'pattern' => '~^/show/([0-9]+)\.xhtml$~',
         'class' => 'User',
@@ -31,7 +31,7 @@ $routes = array
         'aliases' => array('user_id'),
     ),
 
-//    // Форум (http://localhost/forum/web-development/php/12345.xhtml)
+//    // Форум (http://testpage.cc/forum/web-development/php/12345.xhtml)
 //    array(
 //        'pattern' => '~^/forum(/[a-z0-9_/\-]+/)([0-9]+)\.xhtml$~',
 //        'class' => 'Forum',
