@@ -12,7 +12,7 @@ $year = $final['bd_year'];
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Изменить данные <?php echo $name?></title>
+    <title>Изменить данные <?= $name?></title>
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>

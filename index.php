@@ -42,12 +42,8 @@ foreach ($routes as $map)
 }
 $us = new $module($link);
 $final = $us->$action($params);
-print_r($final['first_name']);
-switch ($module){
-    case 'show':
-        include_once 'user_account.php';
-        break;
-}
+$tpl = array('show'=>'user_account.php');
+include($tpl[$action]);
 //echo "\$module: $module\n";
 //echo "\$action: $action\n";
 //echo "\$params:\n";

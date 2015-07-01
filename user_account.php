@@ -1,12 +1,16 @@
+<!--шаблон для вывода личной страницы пользователя-->
 <?php
-
+$name = $final['first_name'];
+$bio = $final['bio'];
+$last_name = $final['last_name'];
+$usid = $final['user_id'];
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <title>Account of <?= $name?></title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="../style.css"/>
 </head>
 <body>
 <div class="main-content">
