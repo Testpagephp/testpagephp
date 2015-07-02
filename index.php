@@ -36,16 +36,16 @@ foreach ($routes as $map)
 
         $module = $map['class'];
         $action = $map['method'];
+        $template = $map['template'];
 
         break;
     }
 }
 $us = new $module($link);
 $final = $us->$action($params);
-$tpl = array('show'=>'user_account.php');
-include($tpl[$action]);
+include $template;
 //echo "\$module: $module\n";
 //echo "\$action: $action\n";
 //echo "\$params:\n";
-//print_r($params['user_id']);
+
 ?>

@@ -15,7 +15,7 @@ $usid = $final['user_id'];
 <body>
 <div class="main-content">
     <div class="north column">
-        <p>Greetings, <?= $name ?> <?= $last_name ?> <a href="update_user.php?user_id=<?= $usid ?>" class="button">Редактировать данные</a></p>
+        <p>Greetings, <?= $name ?> <?= $last_name ?> <a href="../update/<?= $usid ?>.xhtml" class="button">Редактировать данные</a></p>
     </div>
     <div class="west column">
         <!--photo-->

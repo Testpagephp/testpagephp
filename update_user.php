@@ -1,8 +1,8 @@
+
 <?php
-require_once 'user_manage.php';
-$id = $_REQUEST['user_id'];
-$row = new User($link);
-$final = $row -> show($id);
+//Шаблон изменения информации о юзере
+//переменные приходят в массиве final
+$id = $params['user_id'];
 $name = $final['first_name'];
 $last_name = $final['last_name'];
 $bio = $final['bio'];
@@ -13,12 +13,12 @@ $year = $final['bd_year'];
 <head>
     <meta charset="utf-8">
     <title>Изменить данные <?= $name?></title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="../style.css"/><?php //to do разобраться с относительными путями к стилям?>
 </head>
 <body>
 <h1>Изменить данные</h1>
 <div class="intro-form">
-    <form action="change_user.php" method="GET">
+    <form action="../change_user.php" method="POST">
         <label for="name">Имя</label>
         <input type="text" name="name" placeholder="Имя" value="<?=$name?>"/><br/>
         <label for="lastName">Ваша фамилия</label>
