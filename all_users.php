@@ -1,3 +1,4 @@
+<?php if(!defined(ACCESS_SCRIPT)) header('Location:index.php');?>
 <?php require "db_connection/database_connection.php"; ?>
 <?php
 $y_query = "SELECT DISTINCT bd_year FROM users";

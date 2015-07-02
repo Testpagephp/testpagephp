@@ -1,6 +1,7 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+define('ACCESS_SCRIPT',1);//для доступа к шаблонам
 include_once 'routes.php';
 include_once 'user_manage.php';
 // Тут нужно подключить через include файл с маршрутами, который описали выше.
