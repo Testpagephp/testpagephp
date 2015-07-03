@@ -1,3 +1,4 @@
+<!--Шаблон регистрации-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +7,6 @@
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-<?php require 'db_connection/database_connection.php' ?>
 <h1>Регистрация</h1>
 <div class="intro-form">
     <form enctype="multipart/form-data" action="create_user.php" method="POST">
@@ -19,7 +19,7 @@
         <label for="shortDesc">Краткая информация</label>
         <textarea name="bio" cols="30" rows="10"></textarea>
         <input type="hidden" name="MAX_FILE_SIZE" value="20000" />
-        <input name="userfile" type="file"/>
+        <input name="uploadfile" type="file"/>
         <input type="submit" value="Зарегистрироваться"/>
 
     </form>

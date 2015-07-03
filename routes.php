@@ -43,6 +43,17 @@ $routes = array
         // идентификатор пользователя - 12345
         'aliases' => array('user_id'),
     ),
+    array(
+        'pattern' => '~^/registration$~',
+        'class' => '',
+        'method' => '',
+        'template'=>'registration.php',
+        // В aliases перечисляются имена переменных, которые должны быть в дальнейшем созданы
+        // и заполнены значениями, взятыми на основании разбора URL адреса.
+        // В данном случае в переменную user_id должен будет записаться числовой
+        // идентификатор пользователя - 12345
+        'aliases' => array(),
+    ),
 
 //    // Форум (http://testpage.cc/forum/web-development/php/12345.xhtml)
 //    array(

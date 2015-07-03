@@ -7,11 +7,17 @@ class User{
     function User($link){
         $this->link = $link;
     }
-    function add($name,$lastname,$year,$bio){
+    function add($name,$lastname,$year,$bio,$photo){
         if($name==""||$lastname==""||$year==""||$bio==""){
             return 0;
         }else{
-        $query="INSERT INTO users(first_name, last_name, bd_year, bio) VALUES('{$name}', '{$lastname}', '{$year}', '{$bio}')";
+
+
+            $uploaddir = '/uploads/';
+            $uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
+
+
+        $query="INSERT INTO users(first_name, last_name, bd_year, bio, photo) VALUES('{$name}', '{$lastname}', '{$year}', '{$bio}', '{$photo}')";
         $result = $this->link->query($query)
         or die();
         return $result;

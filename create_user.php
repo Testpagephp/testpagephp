@@ -12,10 +12,11 @@ $name = $_REQUEST['name'];
 $last_name = $_REQUEST['lastName'];
 $year = $_REQUEST['year'];
 $bio = $_REQUEST['bio'];
+$photo = $_FILES['uploadfile'];
 $add = new User($link);
-$res = $add->add($name,$last_name,$year,$bio);
+$res = $add->add($name,$last_name,$year,$bio,$photo);
 if($res){
-    header("Location: user_account.php?user_id=" .$link->insert_id);
+    header("Location: show/" .$link->insert_id.".xhtml");
 }else{
     echo "При запросе произошла ошибка, попробуйте снова";
 }

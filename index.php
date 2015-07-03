@@ -42,8 +42,10 @@ foreach ($routes as $map)
         break;
     }
 }
-$us = new $module($link);
-$final = $us->$action($params);
+if($module){
+    $us = new $module($link);
+    $final = $us->$action($params);
+}
 include $template;
 //echo "\$module: $module\n";
 //echo "\$action: $action\n";
